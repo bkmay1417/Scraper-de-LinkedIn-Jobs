@@ -74,7 +74,7 @@ Se definen tres funciones principales que manejan el scraping y la GUI.
 
 1. scrape_linkedin_jobs
 Esta función realiza el scraping de LinkedIn Jobs y guarda los resultados en un archivo CSV.
-```
+```python
 def scrape_linkedin_jobs(keywords, location, save_path):
     try:
         # Configurar las opciones del navegador Chrome en modo headless
@@ -141,7 +141,7 @@ def scrape_linkedin_jobs(keywords, location, save_path):
 2. browse_save_path
 Esta función abre un cuadro de diálogo para seleccionar la carpeta donde se guardará el archivo CSV.
 
-```
+```python
 def browse_save_path():
     folder_selected = filedialog.askdirectory()
     if folder_selected:
@@ -150,7 +150,7 @@ def browse_save_path():
 ```
 3. start_scraping
 Esta función recoge los datos introducidos por el usuario en la GUI y llama a la función scrape_linkedin_jobs.
-```
+```python
 def start_scraping():
     keywords = keywords_entry.get()
     location = location_entry.get()
@@ -169,7 +169,7 @@ def start_scraping():
 ## Creación de la Interfaz Gráfica (GUI)
 Se crea una aplicación Tkinter para que el usuario pueda ingresar las palabras clave, la ubicación y la ruta de guardado de los resultados.
 
-```
+```python
 app = tk.Tk()
 app.title("Scraper de LinkedIn Jobs")
 
